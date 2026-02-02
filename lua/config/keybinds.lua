@@ -8,8 +8,8 @@ keymap('<S-Down>', ':m+<CR>')
 keymap('<M-e>', ':Neotree toggle=true<CR>')
 -- BarBar
 -- meta key = alt
-keymap('<M-Right>', ':tabnext<CR>')
-keymap('<M-Left>', ':tabprevious<CR>')
+keymap('<M-Right>', ':BufferNext<CR>')
+keymap('<M-Left>', ':BufferPrevious<CR>')
 keymap('<M-x>', ':BufferClose<CR>')
 keymap('<M-n>', ':tabnew<CR>')
 keymap('<M-p>', ':BufferPin<CR>')
