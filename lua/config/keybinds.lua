@@ -4,6 +4,10 @@ end
 
 keymap('<S-Up>', ':m-2<CR>')
 keymap('<S-Down>', ':m+<CR>')
+keymap('<S-L>', '3zl')
+keymap('<S-H>', '3zh')
+
+keymap('<M-w>', ':set wrap!<CR>')
 
 keymap('<M-e>', ':Neotree toggle=true<CR>')
 -- BarBar
