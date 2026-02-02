@@ -18,21 +18,24 @@ keymap('<M->>', ':BufferCloseBuffersRight<CR>')
 keymap('<M-lt>', ':BufferCloseBuffersLeft<CR>')
 
 -- Move between splits with alt direction
-keymap('<C-S-Up>', ':wincmd k<CR>')
-keymap('<C-S-Down>', ':wincmd j<CR>')
-keymap('<C-S-Left>', ':wincmd h<CR>')
-keymap('<C-S-Right>', ':wincmd l<CR>')
+keymap('<C-Up>', ':wincmd k<CR>')
+keymap('<C-Down>', ':wincmd j<CR>')
+keymap('<C-Left>', ':wincmd h<CR>')
+keymap('<C-Right>', ':wincmd l<CR>')
 
+-- Create the splits
 keymap('<M-Bslash>',':vsplit<CR>')
 keymap('<M-->',':split<CR>')
 
-keymap('<C-Up>', '<C-w>K')
-keymap('<C-Left>', '<C-w>H')
-keymap('<C-Down>', '<C-w>J')
-keymap('<C-Right>', '<C-w>L') 
+-- Move the splits themselves
+keymap('<C-S-Up>', '<C-w>K')
+keymap('<C-S-Left>', '<C-w>H')
+keymap('<C-S-Down>', '<C-w>J')
+keymap('<C-S-Right>', '<C-w>L') 
 
-keymap('<M-[>', '<C-w><') -- decrease width
-keymap('<M-]>', '<C-w>>') -- increase width
-keymap('<M-{>', '<C-w>-') -- decrease height
-keymap('<M-}>', '<C-w>+') -- increase height
+-- Width managment
+keymap('<M-[>', '5<C-w><') -- decrease width
+keymap('<M-]>', '5<C-w>>') -- increase width
+keymap('<M-{>', '5<C-w>-') -- decrease height
+keymap('<M-}>', '5<C-w>+') -- increase height
 
