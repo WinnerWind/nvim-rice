@@ -5,6 +5,7 @@ end
 keymap('<S-Up>', ':m-2<CR>')
 keymap('<S-Down>', ':m+<CR>')
 
+keymap('<M-e>', ':Neotree toggle=true<CR>')
 -- BarBar
 -- meta key = alt
 keymap('<M-Right>', ':tabnext<CR>')
