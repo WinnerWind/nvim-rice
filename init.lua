@@ -8,4 +8,4 @@ require("config.autoquit-neotree")
 
 require("config.sessions")
 -- Theme
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd.colorscheme("gruvbox")
