@@ -3,6 +3,7 @@ require("config.lsp")
 
 require("config.keybinds")
 require("config.flags")
+require("config.autoquit-neotree")
 
 require("config.sessions")
 -- Theme
