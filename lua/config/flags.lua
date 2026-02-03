@@ -18,3 +18,12 @@ vim.opt.list = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- disable search highlight in neotree
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = 'neo-tree',
+	callback = function()
+		vim.opt_local.hlsearch = false
+		vim.opt_local.incsearch = false
+	end,
+})
+
