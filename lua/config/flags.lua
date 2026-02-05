@@ -27,3 +27,4 @@ vim.api.nvim_create_autocmd('FileType', {
 	end,
 })
 
+vim.opt.conceallevel = 1
