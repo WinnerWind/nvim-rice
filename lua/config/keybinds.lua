@@ -10,6 +10,9 @@ keymap('<S-H>', '3zh')
 keymap('<M-w>', ':set wrap!<CR>')
 
 keymap('<M-e>', ':Neotree toggle=true<CR>')
+
+keymap('<M-L>', ':set hlsearch!<CR>')
+
 -- BarBar
 -- meta key = alt
 keymap('<M-Right>', ':BufferNext<CR>')
