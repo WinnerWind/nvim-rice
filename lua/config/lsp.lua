@@ -1,4 +1,5 @@
 vim.lsp.enable("gdscript")
+vim.lsp.enable("basedpyright")
 
 local severity = vim.diagnostic.severity
 
