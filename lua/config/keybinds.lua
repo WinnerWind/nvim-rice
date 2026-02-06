@@ -13,6 +13,8 @@ keymap('<M-e>', ':Neotree toggle=true<CR>')
 
 keymap('<M-L>', ':set hlsearch!<CR>')
 
+keymap('<C-n>', ':set relativenumber!<CR>')
+
 -- BarBar
 -- meta key = alt
 keymap('<M-Right>', ':BufferNext<CR>')
