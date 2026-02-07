@@ -6,6 +6,6 @@ return {
 		theme = 'void',
 	},
 	text = {
-		workspace = "I'm still open to talk.",
+		workspace = function(opts) return "on "..opts.cursor_line..":"..opts.cursor_char end,
 	},
 }
