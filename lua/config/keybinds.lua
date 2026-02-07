@@ -15,6 +15,9 @@ keymap('<M-L>', ':set hlsearch!<CR>')
 
 keymap('<C-n>', ':set relativenumber!<CR>')
 
+-- Lazygit 
+keymap('<C-g>', ':LazyGit<CR>')
+
 -- BarBar
 -- meta key = alt
 keymap('<M-Right>', ':BufferNext<CR>')
