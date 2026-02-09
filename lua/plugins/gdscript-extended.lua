@@ -1,3 +1,4 @@
 return {
-  "teatek/gdscript-extended-lsp.nvim", opts = {}
+	"teatek/gdscript-extended-lsp.nvim", opts = {},
+	event = "VeryLazy"
 }
