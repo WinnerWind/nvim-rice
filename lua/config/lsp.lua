@@ -27,4 +27,4 @@ vim.api.nvim_create_autocmd("CursorHold", {
 	end,
 })
 
-vim.o.updatetime = 0
+vim.o.updatetime = 300
