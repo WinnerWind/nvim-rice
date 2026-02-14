@@ -9,7 +9,9 @@ keymap('<S-H>', '3zh')
 
 keymap('<M-w>', ':set wrap!<CR>')
 
-keymap('<M-e>', ':Neotree toggle=true<CR>')
+-- uncomment below to use neotree instead
+-- keymap('<M-e>', ':Neotree toggle=true<CR>')
+keymap('<M-e>', ':NnnPicker<CR>')
 
 keymap('<M-L>', ':set hlsearch!<CR>')
 
