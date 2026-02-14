@@ -22,6 +22,10 @@ keymap('<C-g>', ':LazyGit<CR>')
 -- meta key = alt
 keymap('<M-Right>', ':BufferNext<CR>')
 keymap('<M-Left>', ':BufferPrevious<CR>')
+
+keymap('<M-S-Right>', ':BufferMoveNext<CR>')
+keymap('<M-S-Left>', ':BufferMovePrevious<CR>')
+
 keymap('<M-x>', ':BufferClose<CR>')
 keymap('<M-n>', ':tabnew<CR>')
 keymap('<M-p>', ':BufferPin<CR>')
