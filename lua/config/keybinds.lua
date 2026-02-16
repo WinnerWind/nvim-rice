@@ -2,12 +2,34 @@ local keymap = function(lhs, rhs)
     vim.api.nvim_set_keymap('n', lhs, rhs, { noremap = true, silent = true })
 end
 
+-- Helper function to cycle wrap modes
+function toggle_wrap()
+    if not vim.wo.wrap then
+        -- Mode 1: Standard Wrap (on)
+        vim.wo.wrap = true
+        vim.wo.linebreak = false
+        print("Wrap: On (Standard)")
+    elseif vim.wo.wrap and not vim.wo.linebreak then
+        -- Mode 2: Linebreak (wrap at words)
+        vim.wo.wrap = true
+        vim.wo.linebreak = true
+        print("Wrap: On (Linebreak/Word)")
+    else
+        -- Mode 3: No Wrap
+        vim.wo.wrap = false
+        vim.wo.linebreak = false
+        print("Wrap: Off")
+    end
+end
+
+keymap('<M-w>', ':lua toggle_wrap()<CR>')
+-- keymap('<M-w>', ':set wrap!<CR>')
+
 keymap('<S-Up>', ':m-2<CR>')
 keymap('<S-Down>', ':m+<CR>')
 keymap('<S-L>', '3zl')
 keymap('<S-H>', '3zh')
 
-keymap('<M-w>', ':set wrap!<CR>')
 
 -- uncomment below to use neotree instead
 -- keymap('<M-e>', ':Neotree toggle=true<CR>')
