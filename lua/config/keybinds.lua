@@ -25,11 +25,11 @@ end
 keymap('<M-w>', ':lua toggle_wrap()<CR>')
 -- keymap('<M-w>', ':set wrap!<CR>')
 
-
-keymap('<Up>', '<Nop>')
-keymap('<Down>', '<Nop>')
-keymap('<Left>', '<Nop>')
-keymap('<Right>', '<Nop>')
+-- uncomment to train use of hjkl
+-- keymap('<Up>', '<Nop>')
+-- keymap('<Down>', '<Nop>')
+-- keymap('<Left>', '<Nop>')
+-- keymap('<Right>', '<Nop>')
 
 keymap('<S-Up>', ':m-2<CR>')
 keymap('<S-Down>', ':m+<CR>')
