@@ -8,6 +8,13 @@ require("config.autoquit-neotree")
 require("config.sessions")
 -- Theme
 -- vim.cmd.colorscheme("gruvbox")
+vim.opt.background = "dark" -- set this to dark or light
+vim.cmd("colorscheme oxocarbon")
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "none"})
+vim.api.nvim_set_hl(0, 'LineNr', { bg='none', fg='#292929'})
 
 -- Auto update
 local function augroup(name)
