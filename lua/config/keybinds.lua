@@ -22,6 +22,8 @@ function toggle_wrap()
     end
 end
 
+keymap('?', ':WhichKey<CR>')
+
 keymap('<M-w>', ':lua toggle_wrap()<CR>')
 -- keymap('<M-w>', ':set wrap!<CR>')
 
