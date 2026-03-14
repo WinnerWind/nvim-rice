@@ -1,5 +1,5 @@
-local keymap = function(lhs, rhs)
-    vim.api.nvim_set_keymap('n', lhs, rhs, { noremap = true, silent = true })
+local keymap = function(lhs, rhs, desc)
+	vim.api.nvim_set_keymap('n', lhs, rhs, { noremap = true, silent = true, desc = desc })
 end
 
 -- Helper function to cycle wrap modes
@@ -24,7 +24,7 @@ end
 
 keymap('?', ':WhichKey<CR>')
 
-keymap('<M-w>', ':lua toggle_wrap()<CR>')
+keymap('<M-w>', ':lua toggle_wrap()<CR>', "Change wrapping mode")
 -- keymap('<M-w>', ':set wrap!<CR>')
 
 -- uncomment to train use of hjkl
@@ -33,57 +33,57 @@ keymap('<M-w>', ':lua toggle_wrap()<CR>')
 -- keymap('<Left>', '<Nop>')
 -- keymap('<Right>', '<Nop>')
 
-keymap('<S-Up>', ':m-2<CR>')
-keymap('<S-Down>', ':m+<CR>')
-keymap('<S-L>', '3zl')
-keymap('<S-H>', '3zh')
+keymap('<S-Up>', ':m-2<CR>', "Move current line up")
+keymap('<S-Down>', ':m+<CR>', "Move current line down")
+keymap('<S-L>', '3zl', "Move view right")
+keymap('<S-H>', '3zh', "Move view left")
 
 
 -- uncomment below to use neotree instead
 -- keymap('<M-e>', ':Neotree toggle=true<CR>')
-keymap('<M-e>', ':NnnPicker<CR>')
+keymap('<M-e>', ':NnnPicker<CR>', "Open file picker")
 
-keymap('<M-L>', ':set hlsearch!<CR>')
+keymap('<M-L>', ':set hlsearch!<CR>', "Remove highlight")
 
-keymap('<C-n>', ':set relativenumber!<CR>')
+keymap('<C-n>', ':set relativenumber!<CR>', "Toggle relative line number")
 
 -- Lazygit 
-keymap('<C-g>', ':LazyGit<CR>')
+keymap('<C-g>', ':LazyGit<CR>', "Lazygit")
 
 -- BarBar
 -- meta key = alt
-keymap('<M-Right>', ':BufferNext<CR>')
-keymap('<M-Left>', ':BufferPrevious<CR>')
+keymap('<M-Right>', ':BufferNext<CR>', "Tab Next")
+keymap('<M-Left>', ':BufferPrevious<CR>', "Tab Previous")
 
-keymap('<M-S-Right>', ':BufferMoveNext<CR>')
-keymap('<M-S-Left>', ':BufferMovePrevious<CR>')
+keymap('<M-S-Right>', ':BufferMoveNext<CR>', "Tab Move Right")
+keymap('<M-S-Left>', ':BufferMovePrevious<CR>', "Tab Move Left")
 
-keymap('<M-x>', ':BufferClose<CR>')
-keymap('<M-n>', ':tabnew<CR>')
-keymap('<M-p>', ':BufferPin<CR>')
-keymap('<M-X>', ':BufferRestore<CR>')
-keymap('<M->>', ':BufferCloseBuffersRight<CR>')
-keymap('<M-lt>', ':BufferCloseBuffersLeft<CR>')
+keymap('<M-x>', ':BufferClose<CR>', "Tab Close")
+keymap('<M-n>', ':tabnew<CR>', "Tab New")
+keymap('<M-p>', ':BufferPin<CR>', "Tab Pin")
+keymap('<M-X>', ':BufferRestore<CR>', "Tab Restore")
+keymap('<M->>', ':BufferCloseBuffersRight<CR>', "Tab Close All Right")
+keymap('<M-lt>', ':BufferCloseBuffersLeft<CR>', "Tab Close All Left")
 
 -- Move between splits with alt direction
-keymap('<C-Up>', ':wincmd k<CR>')
-keymap('<C-Down>', ':wincmd j<CR>')
-keymap('<C-Left>', ':wincmd h<CR>')
-keymap('<C-Right>', ':wincmd l<CR>')
+keymap('<C-Up>', ':wincmd k<CR>', "Move cursor to upper split")
+keymap('<C-Down>', ':wincmd j<CR>', "Move cursor to lower split")
+keymap('<C-Left>', ':wincmd h<CR>', "Move cursor to left split")
+keymap('<C-Right>', ':wincmd l<CR>', "Move cursor to right split")
 
 -- Create the splits
-keymap('<M-Bslash>',':vsplit<CR>')
-keymap('<M-->',':split<CR>')
+keymap('<M-Bslash>',':vsplit<CR>', "Split vertical")
+keymap('<M-->',':split<CR>', "Split horizontal")
 
 -- Move the splits themselves
-keymap('<C-S-Up>', '<C-w>K')
-keymap('<C-S-Left>', '<C-w>H')
-keymap('<C-S-Down>', '<C-w>J')
-keymap('<C-S-Right>', '<C-w>L') 
+keymap('<C-S-Up>', '<C-w>K', "Split move up")
+keymap('<C-S-Left>', '<C-w>H', "Split move left")
+keymap('<C-S-Down>', '<C-w>J', "Split move down")
+keymap('<C-S-Right>', '<C-w>L', "Split move right") 
 
 -- Width managment
-keymap('<M-[>', '5<C-w><') -- decrease width
-keymap('<M-]>', '5<C-w>>') -- increase width
-keymap('<M-{>', '5<C-w>-') -- decrease height
-keymap('<M-}>', '5<C-w>+') -- increase height
+keymap('<M-[>', '5<C-w><',"Split decrease width") -- decrease width
+keymap('<M-]>', '5<C-w>>', "Split increase width") -- increase width
+keymap('<M-{>', '5<C-w>-', "Split decrease height") -- decrease height
+keymap('<M-}>', '5<C-w>+', "Split increase height") -- increase height
 
