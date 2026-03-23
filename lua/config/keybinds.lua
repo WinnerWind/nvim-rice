@@ -22,6 +22,18 @@ function toggle_wrap()
     end
 end
 
+function toggle_expandtab()
+    if vim.bo.expandtab then
+        -- Mode NoExpandTab
+        vim.bo.expandtab = false
+        print("TAB: Tabulators")
+    else
+        -- Mode ExpandTab
+        vim.bo.expandtab = true
+        print("TAB: Spaces")
+    end
+end
+
 keymap('?', ':WhichKey<CR>')
 
 keymap('<M-w>', ':lua toggle_wrap()<CR>', "Change wrapping mode")
@@ -44,6 +56,7 @@ keymap('<S-H>', '3zh', "Move view left")
 keymap('<M-e>', ':NnnPicker<CR>', "Open file picker")
 
 keymap('<M-L>', ':set hlsearch!<CR>', "Remove highlight")
+keymap('<M-t>', ':lua toggle_expandtab()<CR>', "Set Tabs/Spaces")
 
 keymap('<C-n>', ':set relativenumber!<CR>', "Toggle relative line number")
 
