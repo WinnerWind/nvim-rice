@@ -34,9 +34,31 @@ function toggle_expandtab()
     end
 end
 
+local builtin = require("telescope.builtin")
+function telescope()
+  local pickers = {
+    { name = "Find Files", fn = builtin.find_files },
+    { name = "Live Grep", fn = builtin.live_grep },
+    { name = "Buffers", fn = builtin.buffers },
+  }
+
+  vim.ui.select(pickers, {
+    prompt = "Select Telescope Picker",
+    format_item = function(item)
+      return item.name
+    end,
+  }, function(choice)
+    if choice then
+      choice.fn()
+    end
+  end)
+end
+
 keymap('?', ':WhichKey<CR>')
 
 keymap('<M-w>', ':lua toggle_wrap()<CR>', "Change wrapping mode")
+keymap('<C-f>', ':lua telescope()<CR>', "Telescope menu")
+
 -- keymap('<M-w>', ':set wrap!<CR>')
 
 -- uncomment to train use of hjkl
