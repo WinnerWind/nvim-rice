@@ -109,6 +109,7 @@ keymap('<C-Right>', ':wincmd l<CR>', "Move cursor to right split")
 -- Create the splits
 keymap('<M-Bslash>',':vsplit<CR>', "Split vertical")
 keymap('<M-->',':split<CR>', "Split horizontal")
+keymap('<C-x>', ':close<CR>', "Close split")
 
 -- Move the splits themselves
 keymap('<C-S-Up>', '<C-w>K', "Split move up")
